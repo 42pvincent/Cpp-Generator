@@ -12,8 +12,8 @@ class $class
 {
 	public:
 		$class(void);
-		~$class(void);
 		$class($class const & src);
+		~$class(void);
 
 		$class & operator = ($class const & rhs);
 };
@@ -22,7 +22,8 @@ class $class
 cppname=$class
 cppname+=".class.cpp"
 touch $cppname
-echo "#include \"$hppname\"
+echo "
+#include \"$hppname\"
 
 $class::$class(void)
 {
@@ -36,6 +37,10 @@ $class::$class($class const & src)
 	return ;
 }
 
+$class::~$class(void)
+{
+	return ;
+}
 
 $class &
 $class::operator=($class const & rhs)
@@ -46,9 +51,4 @@ $class::operator=($class const & rhs)
 			//// this-> val = rhs.getVal();
 	}
 	return (*this);
-}
-
-$class::~$class(void)
-{
-	return ;
 }" > $cppname
