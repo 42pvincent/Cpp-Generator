@@ -8,6 +8,8 @@ echo "
 #ifndef		$CLASS
 # define	$CLASS
 
+# include <iostream>
+
 class $class
 {
 	public:
@@ -17,6 +19,8 @@ class $class
 
 		$class & operator = ($class const & rhs);
 };
+
+std::ostream			&operator<<(std::ostream &o, $class const &i);
 
 #endif" > $hppname
 cppname=$class
@@ -51,4 +55,13 @@ $class::operator=($class const & rhs)
 			//// this-> val = rhs.getVal();
 	}
 	return (*this);
-}" > $cppname
+}
+
+std::ostream&
+operator<<(std::ostream &o, $class const &i)
+{
+	o << \"Class : $class\" << std::endl;
+	(void)i;
+	return (o);
+}
+" > $cppname
