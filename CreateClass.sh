@@ -36,7 +36,8 @@ $class::$class($class const & src)
 }
 
 
-$class & $class::operator=($class const & rhs)
+$class &
+$class::operator=($class const & rhs)
 {
 	if (this != &rhs)
 	{
