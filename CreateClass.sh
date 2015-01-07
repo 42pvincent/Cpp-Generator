@@ -1,8 +1,8 @@
 class=$1
 CLASS=`echo "$class" | tr '[:lower:]' '[:upper:]'`
-CLASS+="_HPP"
+CLASS+="_CLASS_HPP"
 hppname=$class
-hppname+=".hpp"
+hppname+=".class.hpp"
 touch $hppname
 echo "
 #ifndef		$CLASS
@@ -20,7 +20,7 @@ class $class
 
 #endif" > $hppname
 cppname=$class
-cppname+=".cpp"
+cppname+=".class.cpp"
 touch $cppname
 echo "#include \"$hppname\"
 
