@@ -1,5 +1,3 @@
-function CreateClass()
-{
 class=$1
 CLASS=`echo "$class" | tr '[:lower:]' '[:upper:]'`
 CLASS+="_H"
@@ -52,4 +50,3 @@ $class::~$class(void)
 {
 	return ;
 }" > $cppname
-}
