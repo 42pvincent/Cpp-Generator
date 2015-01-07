@@ -63,5 +63,4 @@ operator<<(std::ostream &o, $class const &i)
 	o << \"Class : $class\" << std::endl;
 	(void)i;
 	return (o);
-}
-" > $cppname
+}" > $cppname
