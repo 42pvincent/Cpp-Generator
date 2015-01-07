@@ -1,18 +1,19 @@
 class=$1
 CLASS=`echo "$class" | tr '[:lower:]' '[:upper:]'`
-CLASS+="_H"
+CLASS+="_HPP"
 hppname=$class
 hppname+=".hpp"
 touch $hppname
-echo "#ifndef $CLASS
-# define $CLASS
+echo "
+#ifndef		$CLASS
+# define	$CLASS
 
 class $class
 {
 	public:
 		$class(void);
 		~$class(void);
-		$class($class const & src );
+		$class($class const & src);
 
 		$class & operator = ($class const & rhs);
 };
@@ -44,7 +45,7 @@ $class::operator=($class const & rhs)
 			//// PUT VALUE HERE
 			//// this-> val = rhs.getVal();
 	}
-	return *this;
+	return (*this);
 }
 
 $class::~$class(void)
