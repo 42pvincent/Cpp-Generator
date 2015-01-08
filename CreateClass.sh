@@ -18,6 +18,8 @@ class $class
 		~$class(void);
 
 		$class & operator = ($class const & rhs);
+
+	private:
 };
 
 std::ostream			&operator<<(std::ostream &o, $class const &i);
