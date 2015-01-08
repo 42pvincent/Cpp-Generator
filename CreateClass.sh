@@ -1,9 +1,11 @@
 if [ $1 ]; then
 class=$1
-CLASS=`echo "$class" | tr '[:lower:]' '[:upper:]'`
-CLASS+="_CLASS_HPP"
-hppname=$class
-hppname+=".class.hpp"
+CLASS2=`echo "$class" | tr '[:lower:]' '[:upper:]'`
+CLASS3="_CLASS_HPP"
+CLASS=$CLASS2$CLASS3
+hppname2=$class
+hppname3=".class.hpp"
+hppname=$hppname2$hppname3
 touch $hppname
 echo "
 #ifndef		$CLASS
@@ -27,8 +29,9 @@ std::ostream			&operator<<(std::ostream &o, $class const &i);
 
 #endif" > $hppname
 
-cppname=$class
-cppname+=".class.cpp"
+cppname2=$class
+cppname3=".class.cpp"
+cppname=$cppname2$cppname3
 touch $cppname
 echo "
 #include \"$hppname\"
