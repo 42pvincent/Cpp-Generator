@@ -1,4 +1,3 @@
-opt="Test"
 if [ $1 ]; then
 class=$1
 CLASS=`echo "$class" | tr '[:lower:]' '[:upper:]'`
@@ -83,5 +82,6 @@ int		main()
 
 
 rm -rf main.cpp.tmp
-fi
+else
 echo "I need a class name"
+fi
