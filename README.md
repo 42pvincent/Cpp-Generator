@@ -7,7 +7,7 @@ Call it with :
   - Class name
 
 Example :
-./CreateClass.sh Foo
+./CreateClass.sh FooClass
 
 # GetSet
 
