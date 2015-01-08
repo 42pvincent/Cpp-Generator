@@ -17,7 +17,7 @@ class $class
 		$class($class const & src);
 		~$class(void);
 
-		$class & operator = ($class const & rhs);
+		$class			&operator=($class const & rhs);
 };
 
 std::ostream			&operator<<(std::ostream &o, $class const &i);
