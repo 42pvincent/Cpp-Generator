@@ -18,7 +18,7 @@ Call it with :
   - Var name
 
 Example :
-./getset.sh FooClass int bar
+./getset.sh FooClass int bar 
 
 # Private
 Create a new private var in the class you want.
