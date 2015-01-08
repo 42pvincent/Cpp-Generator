@@ -21,7 +21,7 @@ Example :
 ./getset.sh FooClass int bar 
 
 
-Give :
+Add :
   - in FooClass.class.cpp
 
   ```c++
@@ -58,7 +58,7 @@ Call it with :
 Example :
 ./private.sh FooClass int bar
 
-Give :
+Add :
   - in FooClass.class.cpp
 
   ```c++
