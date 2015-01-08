@@ -67,3 +67,11 @@ operator<<(std::ostream &o, $class const &i)
 	(void)i;
 	return (o);
 }" > $cppname
+
+sed -i '.tmp' $'/main(/ i\
+#include'"\"$hppname\"\\
+\\
+" main.cpp
+
+
+rm -rf main.cpp.tmp
