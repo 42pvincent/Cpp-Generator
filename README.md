@@ -57,10 +57,6 @@ Example :
 ./private.sh FooClass int bar
 
 Give :
-
-  -in FooClass.class.cpp
-
-Give :
   - in FooClass.class.cpp
 
   ```c++
