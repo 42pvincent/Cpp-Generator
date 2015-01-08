@@ -69,19 +69,6 @@ operator<<(std::ostream &o, $class const &i)
 	return (o);
 }" > $cppname
 
-sed -i '.tmp' $'/include/ i\
-#include'"\"$hppname\"\\
-\\
-" main.cpp ||
-echo "#include \"$hppname\"
-
-int		main()
-{
-	return (0);
-}" > main.cpp
-
-
-rm -rf main.cpp.tmp
 else
 echo "I need a class name"
 fi
