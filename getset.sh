@@ -1,7 +1,11 @@
 class=$1
 type=$2
 name=$3
-if [ $1 ] && [ $2 ] && [ $3 ];then
+class_filec=$1
+class_fileh=$1
+class_filec+=".class.cpp"
+class_fileh+=".class.hpp"
+if [ $1 ] && [ $2 ] && [ $3 ] && [ -s "$class_filec" ] && [ -s "$class_fileh" ] ;then
 echo "" >> $class.class.cpp
 echo $2 >> $class.class.cpp
 echo "$class::get$name(void) const
@@ -27,5 +31,5 @@ sed -i '.tmp' $'/private:/ i\
 
 rm -rf $1.class.hpp.tmp
 else
-	echo "I need a ClassName, a Type and a Name"
+	echo "I need a ClassName, a Type and a Name.. or maybe, $class_filec does'nt exist"
 fi
