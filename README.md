@@ -44,6 +44,7 @@ Give :
   int getbar(void) const;
   void setbar(int const bar);
 ```
+
 # Private
 
 Create a new private var in the class you want then do the same than getset.sh
