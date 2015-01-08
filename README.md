@@ -15,7 +15,7 @@ Create :
   
 
   ```c++
-  #ifndef		FOOCLASS_CLASS_HPP
+  #ifndef	FOOCLASS_CLASS_HPP
   # define	FOOCLASS_CLASS_HPP
 
   # include <iostream>
