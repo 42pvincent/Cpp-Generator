@@ -9,6 +9,73 @@ Call it with :
 Example :
 ./CreateClass.sh FooClass
 
+Create :
+  -FooClass.class.hpp
+  
+  ```c++
+  #ifndef		FOOCLASS_CLASS_HPP
+  # define	FOOCLASS_CLASS_HPP
+
+  # include <iostream>
+
+  class FooClass
+  {
+	  public:
+	  	FooClass(void);
+	  	FooClass(FooClass const & src);
+	  	~FooClass(void);
+
+  		FooClass & operator = (FooClass const & rhs);
+
+  	private:
+  };
+
+  std::ostream			&operator<<(std::ostream &o, FooClass const &i);
+
+  #endif
+  ```
+  
+  -FooClass.Class.cpp
+  ```c++
+  #include "FooClass.class.hpp"
+
+  FooClass::FooClass(void)
+  {
+  	return ;
+  }
+
+  FooClass::FooClass(FooClass const & src)
+  {
+  	*this = src;
+
+  	return ;
+  }
+
+  FooClass::~FooClass(void)
+  {
+  	return ;
+  }
+
+  FooClass &
+  FooClass::operator=(FooClass const & rhs)
+  {
+  	if (this != &rhs)
+  	{
+  			//// PUT VALUE HERE
+  			//// this-> val = rhs.getVal();
+  	}
+  	return (*this);
+  }
+
+  std::ostream&
+  operator<<(std::ostream &o, FooClass const &i)
+  {
+  	o << "Class : FooClass" << std::endl;
+  	(void)i;
+  	return (o);
+  }
+  ```
+
 # GetSet
 
 Create a new getter and setter.
