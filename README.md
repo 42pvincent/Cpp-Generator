@@ -11,8 +11,9 @@ Example :
 
 Create :
 
-  -FooClass.class.hpp
+- FooClass.class.hpp
   
+
   ```c++
   #ifndef		FOOCLASS_CLASS_HPP
   # define	FOOCLASS_CLASS_HPP
@@ -36,7 +37,7 @@ Create :
   #endif
   ```
   
-  -FooClass.Class.cpp
+- FooClass.Class.cpp
   ```c++
   #include "FooClass.class.hpp"
 
