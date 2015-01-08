@@ -42,7 +42,7 @@ Give :
 
   ```c++
   int getbar(void) const;
-	void setbar(int const bar);
+  void setbar(int const bar);
 ```
 # Private
 Create a new private var in the class you want then do the same than getset.sh
@@ -60,6 +60,9 @@ Give :
 
   -in FooClass.class.cpp
 
+Give :
+  - in FooClass.class.cpp
+
   ```c++
   int
   FooClass::getbar(void) const
@@ -74,13 +77,13 @@ Give :
   	return ;
   }
   ```
-  -in FooClass.class.hpp
+  - in FooClass.class.hpp
 
   ```c++
-    int getbar(void) const;
-	  void setbar(int const bar);
+  int getbar(void) const;
+  void setbar(int const bar);
   
-  	private:
-		  int   _bar;
-	```
+  private:
+    int    _bar;
+```
 
