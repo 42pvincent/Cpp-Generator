@@ -1,7 +1,7 @@
 class=$1
 type=$2
 name=$3
-
+if [ $1 ] && [ $2 ] && [ $3 ]; then
 echo "" >> $class.class.cpp
 echo $2 >> $class.class.cpp
 echo "$class::get$name(void) const
@@ -29,9 +29,8 @@ sed -i '.tmp' $'/private:/ a\
 \\
 "  $1.class.hpp
 
-
-
-
 rm -rf $1.class.hpp.tmp
 
-
+else
+	echo "I need a ClassName, a Type and a Name"
+fi
