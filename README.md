@@ -15,6 +15,3 @@ Call it with :
 Example :
 ./getset.sh Foo int bar
 
-
-Warning :
-  -Don't work with : "RandomFolder/Foo"
