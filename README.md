@@ -10,6 +10,7 @@ Example :
 ./CreateClass.sh FooClass
 
 Create :
+
   -FooClass.class.hpp
   
   ```c++
