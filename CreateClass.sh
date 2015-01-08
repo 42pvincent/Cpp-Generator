@@ -25,6 +25,7 @@ class $class
 std::ostream			&operator<<(std::ostream &o, $class const &i);
 
 #endif" > $hppname
+
 cppname=$class
 cppname+=".class.cpp"
 touch $cppname
