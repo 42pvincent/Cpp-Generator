@@ -8,21 +8,26 @@ echo "
 #ifndef		$CLASS
 # define	$CLASS
 
+# include <iostream>
+
 class $class
 {
 	public:
 		$class(void);
-		~$class(void);
 		$class($class const & src);
+		~$class(void);
 
 		$class & operator = ($class const & rhs);
 };
+
+std::ostream			&operator<<(std::ostream &o, $class const &i);
 
 #endif" > $hppname
 cppname=$class
 cppname+=".class.cpp"
 touch $cppname
-echo "#include \"$hppname\"
+echo "
+#include \"$hppname\"
 
 $class::$class(void)
 {
@@ -36,6 +41,10 @@ $class::$class($class const & src)
 	return ;
 }
 
+$class::~$class(void)
+{
+	return ;
+}
 
 $class &
 $class::operator=($class const & rhs)
@@ -48,7 +57,10 @@ $class::operator=($class const & rhs)
 	return (*this);
 }
 
-$class::~$class(void)
+std::ostream&
+operator<<(std::ostream &o, $class const &i)
 {
-	return ;
+	o << \"Class : $class\" << std::endl;
+	(void)i;
+	return (o);
 }" > $cppname
