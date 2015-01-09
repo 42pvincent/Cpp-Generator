@@ -15,10 +15,10 @@ class $class
 {
 	public:
 		$class(void);
-		$class($class const & src);
+		$class($class const &src);
 		~$class(void);
 
-		$class & operator = ($class const & rhs);
+		$class & operator = ($class const &rhs);
 
 	private:
 };
@@ -38,7 +38,7 @@ $class::$class(void)
 	return ;
 }
 
-$class::$class($class const & src)
+$class::$class($class const &src)
 {
 	*this = src;
 
@@ -51,7 +51,7 @@ $class::~$class(void)
 }
 
 $class &
-$class::operator=($class const & rhs)
+$class::operator=($class const &rhs)
 {
 	if (this != &rhs)
 	{
