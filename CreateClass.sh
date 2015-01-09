@@ -41,7 +41,6 @@ $class::$class(void)
 $class::$class($class const &src)
 {
 	*this = src;
-
 	return ;
 }
 
@@ -50,8 +49,8 @@ $class::~$class(void)
 	return ;
 }
 
-$class &
-$class::operator=($class const &rhs)
+$class
+&$class::operator=($class const &rhs)
 {
 	if (this != &rhs)
 	{
@@ -61,8 +60,8 @@ $class::operator=($class const &rhs)
 	return (*this);
 }
 
-std::ostream&
-operator<<(std::ostream &o, $class const &i)
+std::ostream
+&operator<<(std::ostream &o, $class const &i)
 {
 	o << \"Class : $class\" << std::endl;
 	(void)i;
