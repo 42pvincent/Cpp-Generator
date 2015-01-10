@@ -18,12 +18,12 @@ class $class
 		$class($class const &src);
 		~$class(void);
 
-		$class & operator = ($class const &rhs);
+		$class			&operator=($class const &rhs);
 
 	private:
 };
 
-std::ostream			&operator<<(std::ostream &o, $class const &i);
+std::ostream				&operator<<(std::ostream &o, $class const &i);
 
 #endif" > $hppname
 
