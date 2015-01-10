@@ -18,7 +18,7 @@ class $class
 		$class($class const &src);
 		~$class(void);
 
-		$class			&operator=($class const &rhs);
+		$class				&operator=($class const &rhs);
 
 	private:
 };
@@ -63,7 +63,7 @@ $class
 std::ostream
 &operator<<(std::ostream &o, $class const &i)
 {
-	o << \"Class : $class\" << std::endl;
+	o	<< \"Class : $class\" << std::endl;
 	(void)i;
 	return (o);
 }" > $cppname
