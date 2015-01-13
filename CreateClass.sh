@@ -4,13 +4,15 @@ git clone http://github.com/gundz/ioq3.git ~/Games/quake3-tmp
 sh ~/Games/quake3-tmp/make-macosx.sh x86_64
 mkdir ~/Games/ioquake3
 mv ~/Games/quake3-tmp/build/release-darwin-x86_64/ ~/Games/ioquake3/
-curl -o ~/Games/quake3-tmp/baseq3.zip "http://wingu.trektawimbi.fr/public.php?service=files&t=a234fc4f4f4d4b7882c0ef3316d56a6e&download"
+curl -o ~/Games/quake3-tmp/baseq3.zip "http://wingu.trektawimbi.fr/public.php?service=files&t=f5049d975dd970ded94629228e640f26&download"
 unzip ~/Games/quake3-tmp/baseq3.zip -d ~/Games/quake3-tmp/
 mv ~/Games/ioquake3/release-darwin-x86_64/* ~/Games/ioquake3/
 rm -rf ~/Games/ioquake3/baseq3
 mv ~/Games/quake3-tmp/baseq3 ~/Games/ioquake3/
 rm -rf ~/Games/quake3-tmp
+if [ !$2 ]; then
 ~/Games/ioquake3/ioquake3.x86_64
+fi
 fi
 
 if [ $1 ] && [ $1 != "Quake3" ] ; then
