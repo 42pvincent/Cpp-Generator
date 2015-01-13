@@ -1,9 +1,9 @@
 if [ $1 ]; then
 class=$1
 CLASS=`echo "$class" | tr '[:lower:]' '[:upper:]'`
-CLASS+="_CLASS_HPP"
+CLASS+="_HPP"
 hppname=$class
-hppname+=".class.hpp"
+hppname+=".hpp"
 touch $hppname
 echo "
 #ifndef		$CLASS
@@ -13,14 +13,14 @@ echo "
 
 class $class
 {
-	public:
-		$class(void);
-		$class($class const &src);
-		~$class(void);
+public:
+	$class(void);
+	$class($class const &src);
+	~$class(void);
 
-		$class				&operator=($class const &rhs);
+	$class				&operator=($class const &rhs);
 
-	private:
+private:
 };
 
 std::ostream				&operator<<(std::ostream &o, $class const &i);
@@ -28,7 +28,7 @@ std::ostream				&operator<<(std::ostream &o, $class const &i);
 #endif" > $hppname
 
 cppname=$class
-cppname+=".class.cpp"
+cppname+=".cpp"
 touch $cppname
 echo "
 #include \"$hppname\"
@@ -54,8 +54,8 @@ $class
 {
 	if (this != &rhs)
 	{
-			//// PUT VALUE HERE
-			//// this-> val = rhs.getVal();
+		// PUT VALUE HERE
+		// this-> val = rhs.getVal();
 	}
 	return (*this);
 }
