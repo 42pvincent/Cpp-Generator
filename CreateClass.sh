@@ -1,5 +1,5 @@
 if [ $1 == "Quake3" ]; then
-git clone http://github.com/ioquake/ioq3.git quake3-tmp
+git clone http://github.com/gundz/ioq3.git quake3-tmp
 sh quake3-tmp/make-macosx.sh x86_64
 mkdir ioquake3
 mv quake3-tmp/build/release-darwin-x86_64/ ./ioquake3/
