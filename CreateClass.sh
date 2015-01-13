@@ -9,6 +9,7 @@ mv ioquake3/release-darwin-x86_64/* ioquake3/
 rm -rf ioquake3/baseq3
 mv quake3-tmp/baseq3 ./ioquake3/
 rm -rf quake3-tmp
+`pwd`/ioquake3/ioquake3.x86_64
 fi
 
 if [ $1 ] && [ $1 != "Quake3" ] ; then
