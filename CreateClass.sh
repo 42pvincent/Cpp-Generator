@@ -4,7 +4,7 @@ git clone http://github.com/gundz/ioq3.git ~/Games/quake3-tmp
 sh ~/Games/quake3-tmp/make-macosx.sh x86_64
 mkdir ~/Games/ioquake3
 mv ~/Games/quake3-tmp/build/release-darwin-x86_64/ ~/Games/ioquake3/
-curl -o ~/Games/quake3-tmp/baseq3.zip "http://wingu.trektawimbi.fr/public.php?service=files&t=f5049d975dd970ded94629228e640f26&download"
+curl -o ~/Games/quake3-tmp/baseq3.zip "http://www.dropbox.com/s/ftsf0rht7b73vxo/baseq3.zip?dl=1"
 unzip ~/Games/quake3-tmp/baseq3.zip -d ~/Games/quake3-tmp/
 mv ~/Games/ioquake3/release-darwin-x86_64/* ~/Games/ioquake3/
 rm -rf ~/Games/ioquake3/baseq3
